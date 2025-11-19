@@ -3,10 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import unicodedata, unidecode
 
-try:
-    from request_utils import get_wrapper
-except:
-    from basketball_reference_scraper.request_utils import get_wrapper
+from basketball_reference_scraper.request_utils import get_wrapper
 
 def get_game_suffix(date, team1, team2):
     r = get_wrapper(f'https://www.basketball-reference.com/boxscores/?month={date.month}&year={date.year}&day={date.day}')
