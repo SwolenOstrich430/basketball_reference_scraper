@@ -1,14 +1,14 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 
-try:
-    from constants import TEAM_TO_TEAM_ABBR, TEAM_SETS
-    from utils import remove_accents
-    from request_utils import get_wrapper, get_selenium_wrapper
-except:
-    from basketball_reference_scraper.constants import TEAM_TO_TEAM_ABBR, TEAM_SETS
-    from basketball_reference_scraper.utils import remove_accents
-    from basketball_reference_scraper.request_utils import get_wrapper, get_selenium_wrapper
+# try:
+#     from constants import TEAM_TO_TEAM_ABBR, TEAM_SETS
+#     from utils import remove_accents
+#     from request_utils import get_wrapper, get_selenium_wrapper
+# except:
+from basketball_reference_scraper.constants import TEAM_TO_TEAM_ABBR, TEAM_SETS
+from basketball_reference_scraper.utils import remove_accents
+from basketball_reference_scraper.request_utils import get_wrapper, get_selenium_wrapper
 
 
 def get_roster(team, season_end_year):
