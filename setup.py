@@ -33,7 +33,8 @@ setuptools.setup(
         'six',
         'soupsieve',
         'Unidecode',
-        'selenium'
+        'selenium',
+        'chromedriver_autoinstaller'
     ],
     extras_require={
         'test': ['unittest'],

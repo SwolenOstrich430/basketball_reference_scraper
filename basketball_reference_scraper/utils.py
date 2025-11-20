@@ -2,7 +2,6 @@ from requests import get
 from bs4 import BeautifulSoup
 import pandas as pd
 import unicodedata, unidecode
-
 from basketball_reference_scraper.request_utils import get_wrapper
 
 def get_game_suffix(date, team1, team2):
