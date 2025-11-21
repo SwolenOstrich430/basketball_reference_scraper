@@ -6,12 +6,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
 
-chromedriver_autoinstaller.install()  # Check and install ChromeDriver
 options = Options()
 options.add_argument('--headless=new')
-
+service = Service(ChromeDriverManager().install())
 # Set path to Chrome binary
 # options.binary_location = "/opt/chrome/chrome-linux64/chrome"
 
@@ -21,6 +20,7 @@ options.add_argument('--headless=new')
 # )
 
 driver = webdriver.Chrome(service=service, options=options)
+
 last_request = time()
 
 def get_selenium_wrapper(url, xpath):

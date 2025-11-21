@@ -34,7 +34,7 @@ setuptools.setup(
         'soupsieve',
         'Unidecode',
         'selenium',
-        'chromedriver_autoinstaller'
+        'webdriver_manager'
     ],
     extras_require={
         'test': ['unittest'],
